@@ -6,11 +6,11 @@ class Library
               :checkout_count
 
   def initialize(name)
-    @name = name
-    @books = []
-    @authors = []
+    @name              = name
+    @books             = []
+    @authors           = []
     @checked_out_books = []
-    @checkout_count = {}
+    @checkout_count    = {}
   end
 
   def add_author(author)

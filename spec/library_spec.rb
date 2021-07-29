@@ -92,8 +92,6 @@ RSpec.describe Library do
     dpl.return(mockingbird)
 
     expect(dpl.checkout(mockingbird)).to be true
-
-
   end
 
   it 'shows most popular_book' do
@@ -116,6 +114,11 @@ RSpec.describe Library do
     dpl.return(mockingbird)
     dpl.checkout(mockingbird)
 
+    expected = {jane_eyre => 2,
+                villette => 1,
+                mockingbird => 3}
+
+    expect(dpl.checkout_count).to eq(expected)
     expect(dpl.most_popular_book).to eq(mockingbird)
   end
 end
